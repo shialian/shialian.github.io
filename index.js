@@ -28,7 +28,6 @@ function AddRow(row){
   var ret = [];
   description.forEach(function(item){
     ret.push(row[item]);
-    console.log(ret);
   })
   return ret;
 }
@@ -54,7 +53,7 @@ function Draw(data){
   	.text(function(d){ return d; })
 }
 
-d3.json("Project3.json", function(d){
+d3.json("https://raw.githubusercontent.com/shialian/shialian.github.io/main/Project3.json", function(d){
   groups = d3.keys(d);
   var f = null;
   groups.forEach(function(group){
